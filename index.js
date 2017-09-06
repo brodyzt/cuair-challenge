@@ -74,7 +74,7 @@ function within_range(raw_data) {
 
     var distance = Math.sqrt(Math.pow((x1-135),2) + Math.pow((y1-100),2));
 
-    return distance < 5 && vy*(y1-100) > 0 && vx*(x1-100) > 0;
+    return distance < 5 && vy*(y1-100) > 0 && vx*(x1-135) > 0;
 }
 
 function drop_if_in_range() {
