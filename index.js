@@ -29,7 +29,7 @@ var auto_airdrop_status = false;
 function set_auto_drop_status(status) {
     if(auto_airdrop_status !== status) {
         auto_airdrop_status = status;
-        if(status === "true" && auto_airdrop_status === "true")
+        if(status === "true" && airdrop_status !== "waiting for optimal time")
         {
             set_drop_status("waiting for optimal time");
             autoDrop = setInterval(function(){ drop_if_in_range() }, 50);
@@ -48,7 +48,6 @@ app.get('/auto_airdrop_status', function(req, res) {
 app.post('/auto_airdrop_on', function(req, res) {
     set_auto_drop_status("true");
     io.emit("auto_airdrop_status", "true");
-    autoDrop = setInterval(function(){ drop_if_in_range() }, 50);
     res.send('Auto airdrop turned on');
 
 });
@@ -88,6 +87,7 @@ function drop_if_in_range() {
                         function (error, response, body) {
                             if (!error && response.statusCode === 200) {
                                 set_drop_status("dropped");
+                                console.log("range drop");
                                 io.emit("add_drop", body);
                             }
                         }
