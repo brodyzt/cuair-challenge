@@ -1,0 +1,160 @@
+<?php header("Access-Control-Allow-Origin: *"); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Device </title>
+
+    <!-- Link to main stylesheet -->
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- Link to jquery and popper CDNs -->
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <!-- Link to Velocity.js -->
+    <script src="/js/velocity.min.js"></script>
+    <!-- Link to bootstrap style sheet and js -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Link to socket.io live updating -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <!-- Link to Bootstrap Toggles -->
+    <script src="/js/bootstrap-switch.js"></script>
+    <link href="/css/bootstrap-switch.css" rel="stylesheet">
+    <!-- Link to Javscript code -->
+    <script src="/js/main.js"></script>
+    <!-- Link to Switchery Style -->
+    <link rel="stylesheet" href="/css/switchery.css"/>
+    <script src="/js/switchery.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top">
+    <a class="navbar-brand" href="#">CUAir Flight Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col" style="width: 255px">
+            <div id="map">
+                <div id="target_div"><img src="/img/target.png" id="target_icon"></div>
+                <div id="location_div"><img src="/img/location.png" id="location_icon"></div>
+            </div>
+        </div>
+        <div class="col" id="control-panel">
+            <div>
+                Automatic airdrop:
+                <input type="checkbox" class="js-switch" id="auto_airdrop_switch" />
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-primary" id="reset_airdrop_status_button">Reset Payload</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" id="optimal_manual_drop_button">Optimal Drop</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" id="immediate_manual_drop_button">Immediate Drop</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col" id="stats-panel">
+            <h1>Stats Panel</h1>
+            <table class="table" style="table-layout: fixed;">
+                <tr>
+                    <th scope="row">X Position:</th>
+                    <td id="x_pos"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Y Position:</th>
+                    <td id="y_pos"></td>
+
+                </tr>
+                <tr>
+                    <th scope="row">X Velocity:</th>
+                    <td id="x_vel"></td>
+
+                </tr>
+                <tr>
+                    <th scope="row">Y Velocity:</th>
+                    <td id="y_vel"></td>
+
+                </tr>
+                <tr>
+                    <th scope="row">Distance:</th>
+                    <td id="distance_from_target"></td>
+
+                </tr>
+                <tr>
+                    <th scope="row">Airdrop Status:</th>
+                    <td id="airdrop_status"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col" id="drops-panel">
+            <h1>Drops List</h1>
+            <div id="drop_data" style="overflow-y: scroll; position: relative; height: 500px">
+                <ul id="drops"></ul>
+            </div>
+            <button type="button" class="btn btn-primary" id="clear_drops_button">Clear Previous Drops</button>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="need-to-reset-modal" tabindex="-1" role="dialog"aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Invalid Action</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Please reset payload before dropping again.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Sounds good</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</div><!-- /.container -->
+
+
+</body>
+</html>

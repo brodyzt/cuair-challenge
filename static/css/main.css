@@ -1,0 +1,87 @@
+#location_icon {
+    width: 30px;
+    height: 30px;
+}
+
+#location_div {
+    position: relative;
+    left: 15px;
+    top: 15px;
+}
+
+#target_icon {
+    width: 30px;
+    height: 30px;
+}
+
+#target_div {
+    position: relative;
+    left: 120px;
+    top: 140px;
+
+}
+
+#map {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 255px;
+    height: 255px;
+}
+
+#drops {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+}
+
+
+#drops li {
+    padding: 5px 10px;
+    word-wrap: break-word;
+    text-align: left;
+}
+#drops li:nth-child(odd) {
+    background: #eee;
+}
+
+body {
+    padding-top: 5rem;
+}
+
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #282f3a;
+}
+
+.navbar a {
+    color: #efefef;
+}
+
+.row, col {
+    outline-color: black;
+    outline-style: dashed;
+    outline-width: 0px;
+}
+
+table td {
+    overflow: hidden;
+}
+
+#stats-panel, #drops-panel {
+    text-align: center;
+}
+
+#control-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}

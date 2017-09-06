@@ -1,0 +1,718 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'node' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData node
+8 silly fetchNamedPackageData node
+9 silly mapToRegistry name node
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/node
+13 verbose request uri https://registry.npmjs.org/node
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 8:05:00 PM
+16 verbose request id 51e0ce51e6da69e2
+17 http request GET https://registry.npmjs.org/node
+18 http 200 https://registry.npmjs.org/node
+19 verbose headers { server: 'nginx/1.10.1',
+19 verbose headers   'content-type': 'application/json',
+19 verbose headers   'last-modified': 'Fri, 01 Sep 2017 16:19:59 GMT',
+19 verbose headers   etag: 'W/"59a988af-4e335"',
+19 verbose headers   'content-encoding': 'gzip',
+19 verbose headers   'cache-control': 'max-age=300',
+19 verbose headers   'content-length': '51496',
+19 verbose headers   'accept-ranges': 'bytes',
+19 verbose headers   date: 'Wed, 06 Sep 2017 01:04:59 GMT',
+19 verbose headers   via: '1.1 varnish',
+19 verbose headers   age: '0',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   'x-served-by': 'cache-bos8220-BOS',
+19 verbose headers   'x-cache': 'MISS',
+19 verbose headers   'x-cache-hits': '0',
+19 verbose headers   'x-timer': 'S1504659899.971402,VS0,VE147',
+19 verbose headers   vary: 'Accept-Encoding, Accept' }
+20 silly get cb [ 200,
+20 silly get   { server: 'nginx/1.10.1',
+20 silly get     'content-type': 'application/json',
+20 silly get     'last-modified': 'Fri, 01 Sep 2017 16:19:59 GMT',
+20 silly get     etag: 'W/"59a988af-4e335"',
+20 silly get     'content-encoding': 'gzip',
+20 silly get     'cache-control': 'max-age=300',
+20 silly get     'content-length': '51496',
+20 silly get     'accept-ranges': 'bytes',
+20 silly get     date: 'Wed, 06 Sep 2017 01:04:59 GMT',
+20 silly get     via: '1.1 varnish',
+20 silly get     age: '0',
+20 silly get     connection: 'keep-alive',
+20 silly get     'x-served-by': 'cache-bos8220-BOS',
+20 silly get     'x-cache': 'MISS',
+20 silly get     'x-cache-hits': '0',
+20 silly get     'x-timer': 'S1504659899.971402,VS0,VE147',
+20 silly get     vary: 'Accept-Encoding, Accept' } ]
+21 verbose get saving node to /home/brodyzt/.npm/registry.npmjs.org/node/.cache.json
+22 silly install normalizeTree
+23 silly loadCurrentTree Finishing
+24 silly loadIdealTree Starting
+25 silly install loadIdealTree
+26 silly cloneCurrentTree Starting
+27 silly install cloneCurrentTreeToIdealTree
+28 silly cloneCurrentTree Finishing
+29 silly loadShrinkwrap Starting
+30 silly install loadShrinkwrap
+31 silly loadShrinkwrap Finishing
+32 silly loadAllDepsIntoIdealTree Starting
+33 silly install loadAllDepsIntoIdealTree
+34 silly resolveWithNewModule node@8.3.0 checking installable status
+35 silly cache add args [ 'node', null ]
+36 verbose cache add spec node
+37 silly cache add parsed spec Result {
+37 silly cache add   raw: 'node',
+37 silly cache add   scope: null,
+37 silly cache add   name: 'node',
+37 silly cache add   rawSpec: '',
+37 silly cache add   spec: 'latest',
+37 silly cache add   type: 'tag' }
+38 silly addNamed node@latest
+39 verbose addNamed "latest" is being treated as a dist-tag for node
+40 info addNameTag [ 'node', 'latest' ]
+41 silly mapToRegistry name node
+42 silly mapToRegistry using default registry
+43 silly mapToRegistry registry https://registry.npmjs.org/
+44 silly mapToRegistry uri https://registry.npmjs.org/node
+45 verbose addNameTag registry:https://registry.npmjs.org/node not in flight; fetching
+46 verbose get https://registry.npmjs.org/node not expired, no request
+47 silly addNameTag next cb for node with tag latest
+48 silly addNamed node@8.3.0
+49 verbose addNamed "8.3.0" is a plain semver version for node
+50 silly mapToRegistry name node
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/node
+54 verbose addRemoteTarball https://registry.npmjs.org/node/-/node-8.3.0.tgz not in flight; adding
+55 verbose addRemoteTarball [ 'https://registry.npmjs.org/node/-/node-8.3.0.tgz',
+55 verbose addRemoteTarball   '478e84ffcc4be39938306ace1c4613c8231e5f44' ]
+56 info retry fetch attempt 1 at 8:05:01 PM
+57 info attempt registry request try #1 at 8:05:01 PM
+58 http fetch GET https://registry.npmjs.org/node/-/node-8.3.0.tgz
+59 http fetch 200 https://registry.npmjs.org/node/-/node-8.3.0.tgz
+60 silly fetchAndShaCheck shasum 478e84ffcc4be39938306ace1c4613c8231e5f44
+61 verbose addTmpTarball /tmp/npm-291-7f724b71/registry.npmjs.org/node/-/node-8.3.0.tgz not in flight; adding
+62 verbose addTmpTarball already have metadata; skipping unpack for node@8.3.0
+63 silly cache afterAdd node@8.3.0
+64 verbose afterAdd /home/brodyzt/.npm/node/8.3.0/package/package.json not in flight; writing
+65 verbose afterAdd /home/brodyzt/.npm/node/8.3.0/package/package.json written
+66 silly fetchNamedPackageData node-bin-setup
+67 silly mapToRegistry name node-bin-setup
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry https://registry.npmjs.org/
+70 silly mapToRegistry uri https://registry.npmjs.org/node-bin-setup
+71 verbose request uri https://registry.npmjs.org/node-bin-setup
+72 verbose request no auth needed
+73 info attempt registry request try #1 at 8:05:01 PM
+74 http request GET https://registry.npmjs.org/node-bin-setup
+75 http 200 https://registry.npmjs.org/node-bin-setup
+76 verbose headers { server: 'nginx/1.10.1',
+76 verbose headers   'content-type': 'application/json',
+76 verbose headers   'last-modified': 'Tue, 25 Jul 2017 03:32:58 GMT',
+76 verbose headers   etag: 'W/"5976bbea-1511"',
+76 verbose headers   'content-encoding': 'gzip',
+76 verbose headers   'cache-control': 'max-age=300',
+76 verbose headers   'content-length': '1464',
+76 verbose headers   'accept-ranges': 'bytes',
+76 verbose headers   date: 'Wed, 06 Sep 2017 01:04:59 GMT',
+76 verbose headers   via: '1.1 varnish',
+76 verbose headers   age: '0',
+76 verbose headers   connection: 'keep-alive',
+76 verbose headers   'x-served-by': 'cache-bos8227-BOS',
+76 verbose headers   'x-cache': 'MISS',
+76 verbose headers   'x-cache-hits': '0',
+76 verbose headers   'x-timer': 'S1504659899.351088,VS0,VE381',
+76 verbose headers   vary: 'Accept-Encoding, Accept' }
+77 silly get cb [ 200,
+77 silly get   { server: 'nginx/1.10.1',
+77 silly get     'content-type': 'application/json',
+77 silly get     'last-modified': 'Tue, 25 Jul 2017 03:32:58 GMT',
+77 silly get     etag: 'W/"5976bbea-1511"',
+77 silly get     'content-encoding': 'gzip',
+77 silly get     'cache-control': 'max-age=300',
+77 silly get     'content-length': '1464',
+77 silly get     'accept-ranges': 'bytes',
+77 silly get     date: 'Wed, 06 Sep 2017 01:04:59 GMT',
+77 silly get     via: '1.1 varnish',
+77 silly get     age: '0',
+77 silly get     connection: 'keep-alive',
+77 silly get     'x-served-by': 'cache-bos8227-BOS',
+77 silly get     'x-cache': 'MISS',
+77 silly get     'x-cache-hits': '0',
+77 silly get     'x-timer': 'S1504659899.351088,VS0,VE381',
+77 silly get     vary: 'Accept-Encoding, Accept' } ]
+78 verbose get saving node-bin-setup to /home/brodyzt/.npm/registry.npmjs.org/node-bin-setup/.cache.json
+79 silly resolveWithNewModule node-bin-setup@1.0.6 checking installable status
+80 silly cache add args [ 'node-bin-setup@^1.0.0', null ]
+81 verbose cache add spec node-bin-setup@^1.0.0
+82 silly cache add parsed spec Result {
+82 silly cache add   raw: 'node-bin-setup@^1.0.0',
+82 silly cache add   scope: null,
+82 silly cache add   name: 'node-bin-setup',
+82 silly cache add   rawSpec: '^1.0.0',
+82 silly cache add   spec: '>=1.0.0 <2.0.0',
+82 silly cache add   type: 'range' }
+83 silly addNamed node-bin-setup@>=1.0.0 <2.0.0
+84 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for node-bin-setup
+85 silly addNameRange { name: 'node-bin-setup',
+85 silly addNameRange   range: '>=1.0.0 <2.0.0',
+85 silly addNameRange   hasData: false }
+86 silly mapToRegistry name node-bin-setup
+87 silly mapToRegistry using default registry
+88 silly mapToRegistry registry https://registry.npmjs.org/
+89 silly mapToRegistry uri https://registry.npmjs.org/node-bin-setup
+90 verbose addNameRange registry:https://registry.npmjs.org/node-bin-setup not in flight; fetching
+91 verbose get https://registry.npmjs.org/node-bin-setup not expired, no request
+92 silly addNameRange number 2 { name: 'node-bin-setup',
+92 silly addNameRange   range: '>=1.0.0 <2.0.0',
+92 silly addNameRange   hasData: true }
+93 silly addNameRange versions [ 'node-bin-setup',
+93 silly addNameRange   [ '1.0.0', '1.0.1', '1.0.2', '1.0.3', '1.0.4', '1.0.6' ] ]
+94 silly addNamed node-bin-setup@1.0.6
+95 verbose addNamed "1.0.6" is a plain semver version for node-bin-setup
+96 silly mapToRegistry name node-bin-setup
+97 silly mapToRegistry using default registry
+98 silly mapToRegistry registry https://registry.npmjs.org/
+99 silly mapToRegistry uri https://registry.npmjs.org/node-bin-setup
+100 verbose addRemoteTarball https://registry.npmjs.org/node-bin-setup/-/node-bin-setup-1.0.6.tgz not in flight; adding
+101 verbose addRemoteTarball [ 'https://registry.npmjs.org/node-bin-setup/-/node-bin-setup-1.0.6.tgz',
+101 verbose addRemoteTarball   '4b5c9bb937ece702d7069b36ca78af4684677528' ]
+102 info retry fetch attempt 1 at 8:05:01 PM
+103 info attempt registry request try #1 at 8:05:01 PM
+104 http fetch GET https://registry.npmjs.org/node-bin-setup/-/node-bin-setup-1.0.6.tgz
+105 http fetch 200 https://registry.npmjs.org/node-bin-setup/-/node-bin-setup-1.0.6.tgz
+106 silly fetchAndShaCheck shasum 4b5c9bb937ece702d7069b36ca78af4684677528
+107 verbose addTmpTarball /tmp/npm-291-7f724b71/registry.npmjs.org/node-bin-setup/-/node-bin-setup-1.0.6.tgz not in flight; adding
+108 verbose addTmpTarball already have metadata; skipping unpack for node-bin-setup@1.0.6
+109 silly cache afterAdd node-bin-setup@1.0.6
+110 verbose afterAdd /home/brodyzt/.npm/node-bin-setup/1.0.6/package/package.json not in flight; writing
+111 verbose afterAdd /home/brodyzt/.npm/node-bin-setup/1.0.6/package/package.json written
+112 silly loadAllDepsIntoIdealTree Finishing
+113 silly idealTree:prePrune frontend@1.0.0
+113 silly idealTree:prePrune ├── accepts@1.3.4
+113 silly idealTree:prePrune ├── after@0.8.2
+113 silly idealTree:prePrune ├── array-flatten@1.1.1
+113 silly idealTree:prePrune ├── arraybuffer.slice@0.0.6
+113 silly idealTree:prePrune ├── backo2@1.0.2
+113 silly idealTree:prePrune ├── base64-arraybuffer@0.1.5
+113 silly idealTree:prePrune ├── base64id@1.0.0
+113 silly idealTree:prePrune ├── better-assert@1.0.2
+113 silly idealTree:prePrune ├── blob@0.0.4
+113 silly idealTree:prePrune ├── callsite@1.0.0
+113 silly idealTree:prePrune ├── component-bind@1.0.0
+113 silly idealTree:prePrune ├── component-emitter@1.2.1
+113 silly idealTree:prePrune ├── component-inherit@0.0.3
+113 silly idealTree:prePrune ├── content-disposition@0.5.2
+113 silly idealTree:prePrune ├── content-type@1.0.2
+113 silly idealTree:prePrune ├── cookie-signature@1.0.6
+113 silly idealTree:prePrune ├── cookie@0.3.1
+113 silly idealTree:prePrune ├── debug@2.6.1
+113 silly idealTree:prePrune ├── depd@1.1.1
+113 silly idealTree:prePrune ├── destroy@1.0.4
+113 silly idealTree:prePrune ├── ee-first@1.1.1
+113 silly idealTree:prePrune ├── encodeurl@1.0.1
+113 silly idealTree:prePrune ├─┬ engine.io-client@3.1.1
+113 silly idealTree:prePrune │ ├── debug@2.6.8
+113 silly idealTree:prePrune │ └── ms@2.0.0
+113 silly idealTree:prePrune ├── engine.io-parser@2.1.1
+113 silly idealTree:prePrune ├─┬ engine.io@3.1.1
+113 silly idealTree:prePrune │ ├── accepts@1.3.3
+113 silly idealTree:prePrune │ ├── debug@2.6.8
+113 silly idealTree:prePrune │ └── ms@2.0.0
+113 silly idealTree:prePrune ├── escape-html@1.0.3
+113 silly idealTree:prePrune ├── etag@1.8.0
+113 silly idealTree:prePrune ├── express@4.15.2
+113 silly idealTree:prePrune ├─┬ finalhandler@1.0.4
+113 silly idealTree:prePrune │ ├── debug@2.6.8
+113 silly idealTree:prePrune │ └── ms@2.0.0
+113 silly idealTree:prePrune ├── forwarded@0.1.0
+113 silly idealTree:prePrune ├── fresh@0.5.0
+113 silly idealTree:prePrune ├── has-binary2@1.0.2
+113 silly idealTree:prePrune ├── has-cors@1.1.0
+113 silly idealTree:prePrune ├── http-errors@1.6.2
+113 silly idealTree:prePrune ├── indexof@0.0.1
+113 silly idealTree:prePrune ├── inherits@2.0.3
+113 silly idealTree:prePrune ├── ipaddr.js@1.4.0
+113 silly idealTree:prePrune ├── isarray@2.0.1
+113 silly idealTree:prePrune ├── media-typer@0.3.0
+113 silly idealTree:prePrune ├── merge-descriptors@1.0.1
+113 silly idealTree:prePrune ├── methods@1.1.2
+113 silly idealTree:prePrune ├── mime-db@1.30.0
+113 silly idealTree:prePrune ├── mime-types@2.1.17
+113 silly idealTree:prePrune ├── mime@1.3.4
+113 silly idealTree:prePrune ├── ms@0.7.2
+113 silly idealTree:prePrune ├── n@2.1.8
+113 silly idealTree:prePrune ├── negotiator@0.6.1
+113 silly idealTree:prePrune ├── node-bin-setup@1.0.6
+113 silly idealTree:prePrune ├── node@8.3.0
+113 silly idealTree:prePrune ├── object-assign@4.1.1
+113 silly idealTree:prePrune ├── object-component@0.0.3
+113 silly idealTree:prePrune ├── on-finished@2.3.0
+113 silly idealTree:prePrune ├── parsejson@0.0.3
+113 silly idealTree:prePrune ├── parseqs@0.0.5
+113 silly idealTree:prePrune ├── parseuri@0.0.5
+113 silly idealTree:prePrune ├── parseurl@1.3.1
+113 silly idealTree:prePrune ├── path-to-regexp@0.1.7
+113 silly idealTree:prePrune ├── proxy-addr@1.1.5
+113 silly idealTree:prePrune ├── qs@6.4.0
+113 silly idealTree:prePrune ├── range-parser@1.2.0
+113 silly idealTree:prePrune ├── safe-buffer@5.0.1
+113 silly idealTree:prePrune ├── send@0.15.1
+113 silly idealTree:prePrune ├── serve-static@1.12.1
+113 silly idealTree:prePrune ├── setprototypeof@1.0.3
+113 silly idealTree:prePrune ├── socket.io-adapter@1.1.1
+113 silly idealTree:prePrune ├─┬ socket.io-client@2.0.3
+113 silly idealTree:prePrune │ ├── debug@2.6.8
+113 silly idealTree:prePrune │ └── ms@2.0.0
+113 silly idealTree:prePrune ├─┬ socket.io-parser@3.1.2
+113 silly idealTree:prePrune │ ├── debug@2.6.8
+113 silly idealTree:prePrune │ └── ms@2.0.0
+113 silly idealTree:prePrune ├─┬ socket.io@2.0.3
+113 silly idealTree:prePrune │ ├── debug@2.6.8
+113 silly idealTree:prePrune │ └── ms@2.0.0
+113 silly idealTree:prePrune ├── statuses@1.3.1
+113 silly idealTree:prePrune ├── to-array@0.1.4
+113 silly idealTree:prePrune ├── type-is@1.6.15
+113 silly idealTree:prePrune ├── ultron@1.1.0
+113 silly idealTree:prePrune ├── unpipe@1.0.0
+113 silly idealTree:prePrune ├── utils-merge@1.0.0
+113 silly idealTree:prePrune ├── uws@0.14.5
+113 silly idealTree:prePrune ├── vary@1.1.1
+113 silly idealTree:prePrune ├── ws@2.3.1
+113 silly idealTree:prePrune ├── xmlhttprequest-ssl@1.5.3
+113 silly idealTree:prePrune └── yeast@0.1.2
+114 silly loadIdealTree Finishing
+115 silly currentTree frontend@1.0.0
+115 silly currentTree ├── accepts@1.3.4
+115 silly currentTree ├── after@0.8.2
+115 silly currentTree ├── array-flatten@1.1.1
+115 silly currentTree ├── arraybuffer.slice@0.0.6
+115 silly currentTree ├── backo2@1.0.2
+115 silly currentTree ├── base64-arraybuffer@0.1.5
+115 silly currentTree ├── base64id@1.0.0
+115 silly currentTree ├── better-assert@1.0.2
+115 silly currentTree ├── blob@0.0.4
+115 silly currentTree ├── callsite@1.0.0
+115 silly currentTree ├── component-bind@1.0.0
+115 silly currentTree ├── component-emitter@1.2.1
+115 silly currentTree ├── component-inherit@0.0.3
+115 silly currentTree ├── content-disposition@0.5.2
+115 silly currentTree ├── content-type@1.0.2
+115 silly currentTree ├── cookie-signature@1.0.6
+115 silly currentTree ├── cookie@0.3.1
+115 silly currentTree ├── debug@2.6.1
+115 silly currentTree ├── depd@1.1.1
+115 silly currentTree ├── destroy@1.0.4
+115 silly currentTree ├── ee-first@1.1.1
+115 silly currentTree ├── encodeurl@1.0.1
+115 silly currentTree ├─┬ engine.io-client@3.1.1
+115 silly currentTree │ ├── debug@2.6.8
+115 silly currentTree │ └── ms@2.0.0
+115 silly currentTree ├── engine.io-parser@2.1.1
+115 silly currentTree ├─┬ engine.io@3.1.1
+115 silly currentTree │ ├── accepts@1.3.3
+115 silly currentTree │ ├── debug@2.6.8
+115 silly currentTree │ └── ms@2.0.0
+115 silly currentTree ├── escape-html@1.0.3
+115 silly currentTree ├── etag@1.8.0
+115 silly currentTree ├── express@4.15.2
+115 silly currentTree ├─┬ finalhandler@1.0.4
+115 silly currentTree │ ├── debug@2.6.8
+115 silly currentTree │ └── ms@2.0.0
+115 silly currentTree ├── forwarded@0.1.0
+115 silly currentTree ├── fresh@0.5.0
+115 silly currentTree ├── has-binary2@1.0.2
+115 silly currentTree ├── has-cors@1.1.0
+115 silly currentTree ├── http-errors@1.6.2
+115 silly currentTree ├── indexof@0.0.1
+115 silly currentTree ├── inherits@2.0.3
+115 silly currentTree ├── ipaddr.js@1.4.0
+115 silly currentTree ├── isarray@2.0.1
+115 silly currentTree ├── media-typer@0.3.0
+115 silly currentTree ├── merge-descriptors@1.0.1
+115 silly currentTree ├── methods@1.1.2
+115 silly currentTree ├── mime-db@1.30.0
+115 silly currentTree ├── mime-types@2.1.17
+115 silly currentTree ├── mime@1.3.4
+115 silly currentTree ├── ms@0.7.2
+115 silly currentTree ├── n@2.1.8
+115 silly currentTree ├── negotiator@0.6.1
+115 silly currentTree ├── object-assign@4.1.1
+115 silly currentTree ├── object-component@0.0.3
+115 silly currentTree ├── on-finished@2.3.0
+115 silly currentTree ├── parsejson@0.0.3
+115 silly currentTree ├── parseqs@0.0.5
+115 silly currentTree ├── parseuri@0.0.5
+115 silly currentTree ├── parseurl@1.3.1
+115 silly currentTree ├── path-to-regexp@0.1.7
+115 silly currentTree ├── proxy-addr@1.1.5
+115 silly currentTree ├── qs@6.4.0
+115 silly currentTree ├── range-parser@1.2.0
+115 silly currentTree ├── safe-buffer@5.0.1
+115 silly currentTree ├── send@0.15.1
+115 silly currentTree ├── serve-static@1.12.1
+115 silly currentTree ├── setprototypeof@1.0.3
+115 silly currentTree ├── socket.io-adapter@1.1.1
+115 silly currentTree ├─┬ socket.io-client@2.0.3
+115 silly currentTree │ ├── debug@2.6.8
+115 silly currentTree │ └── ms@2.0.0
+115 silly currentTree ├─┬ socket.io-parser@3.1.2
+115 silly currentTree │ ├── debug@2.6.8
+115 silly currentTree │ └── ms@2.0.0
+115 silly currentTree ├─┬ socket.io@2.0.3
+115 silly currentTree │ ├── debug@2.6.8
+115 silly currentTree │ └── ms@2.0.0
+115 silly currentTree ├── statuses@1.3.1
+115 silly currentTree ├── to-array@0.1.4
+115 silly currentTree ├── type-is@1.6.15
+115 silly currentTree ├── ultron@1.1.0
+115 silly currentTree ├── unpipe@1.0.0
+115 silly currentTree ├── utils-merge@1.0.0
+115 silly currentTree ├── uws@0.14.5
+115 silly currentTree ├── vary@1.1.1
+115 silly currentTree ├── ws@2.3.1
+115 silly currentTree ├── xmlhttprequest-ssl@1.5.3
+115 silly currentTree └── yeast@0.1.2
+116 silly idealTree frontend@1.0.0
+116 silly idealTree ├── accepts@1.3.4
+116 silly idealTree ├── after@0.8.2
+116 silly idealTree ├── array-flatten@1.1.1
+116 silly idealTree ├── arraybuffer.slice@0.0.6
+116 silly idealTree ├── backo2@1.0.2
+116 silly idealTree ├── base64-arraybuffer@0.1.5
+116 silly idealTree ├── base64id@1.0.0
+116 silly idealTree ├── better-assert@1.0.2
+116 silly idealTree ├── blob@0.0.4
+116 silly idealTree ├── callsite@1.0.0
+116 silly idealTree ├── component-bind@1.0.0
+116 silly idealTree ├── component-emitter@1.2.1
+116 silly idealTree ├── component-inherit@0.0.3
+116 silly idealTree ├── content-disposition@0.5.2
+116 silly idealTree ├── content-type@1.0.2
+116 silly idealTree ├── cookie-signature@1.0.6
+116 silly idealTree ├── cookie@0.3.1
+116 silly idealTree ├── debug@2.6.1
+116 silly idealTree ├── depd@1.1.1
+116 silly idealTree ├── destroy@1.0.4
+116 silly idealTree ├── ee-first@1.1.1
+116 silly idealTree ├── encodeurl@1.0.1
+116 silly idealTree ├─┬ engine.io-client@3.1.1
+116 silly idealTree │ ├── debug@2.6.8
+116 silly idealTree │ └── ms@2.0.0
+116 silly idealTree ├── engine.io-parser@2.1.1
+116 silly idealTree ├─┬ engine.io@3.1.1
+116 silly idealTree │ ├── accepts@1.3.3
+116 silly idealTree │ ├── debug@2.6.8
+116 silly idealTree │ └── ms@2.0.0
+116 silly idealTree ├── escape-html@1.0.3
+116 silly idealTree ├── etag@1.8.0
+116 silly idealTree ├── express@4.15.2
+116 silly idealTree ├─┬ finalhandler@1.0.4
+116 silly idealTree │ ├── debug@2.6.8
+116 silly idealTree │ └── ms@2.0.0
+116 silly idealTree ├── forwarded@0.1.0
+116 silly idealTree ├── fresh@0.5.0
+116 silly idealTree ├── has-binary2@1.0.2
+116 silly idealTree ├── has-cors@1.1.0
+116 silly idealTree ├── http-errors@1.6.2
+116 silly idealTree ├── indexof@0.0.1
+116 silly idealTree ├── inherits@2.0.3
+116 silly idealTree ├── ipaddr.js@1.4.0
+116 silly idealTree ├── isarray@2.0.1
+116 silly idealTree ├── media-typer@0.3.0
+116 silly idealTree ├── merge-descriptors@1.0.1
+116 silly idealTree ├── methods@1.1.2
+116 silly idealTree ├── mime-db@1.30.0
+116 silly idealTree ├── mime-types@2.1.17
+116 silly idealTree ├── mime@1.3.4
+116 silly idealTree ├── ms@0.7.2
+116 silly idealTree ├── n@2.1.8
+116 silly idealTree ├── negotiator@0.6.1
+116 silly idealTree ├── node-bin-setup@1.0.6
+116 silly idealTree ├── node@8.3.0
+116 silly idealTree ├── object-assign@4.1.1
+116 silly idealTree ├── object-component@0.0.3
+116 silly idealTree ├── on-finished@2.3.0
+116 silly idealTree ├── parsejson@0.0.3
+116 silly idealTree ├── parseqs@0.0.5
+116 silly idealTree ├── parseuri@0.0.5
+116 silly idealTree ├── parseurl@1.3.1
+116 silly idealTree ├── path-to-regexp@0.1.7
+116 silly idealTree ├── proxy-addr@1.1.5
+116 silly idealTree ├── qs@6.4.0
+116 silly idealTree ├── range-parser@1.2.0
+116 silly idealTree ├── safe-buffer@5.0.1
+116 silly idealTree ├── send@0.15.1
+116 silly idealTree ├── serve-static@1.12.1
+116 silly idealTree ├── setprototypeof@1.0.3
+116 silly idealTree ├── socket.io-adapter@1.1.1
+116 silly idealTree ├─┬ socket.io-client@2.0.3
+116 silly idealTree │ ├── debug@2.6.8
+116 silly idealTree │ └── ms@2.0.0
+116 silly idealTree ├─┬ socket.io-parser@3.1.2
+116 silly idealTree │ ├── debug@2.6.8
+116 silly idealTree │ └── ms@2.0.0
+116 silly idealTree ├─┬ socket.io@2.0.3
+116 silly idealTree │ ├── debug@2.6.8
+116 silly idealTree │ └── ms@2.0.0
+116 silly idealTree ├── statuses@1.3.1
+116 silly idealTree ├── to-array@0.1.4
+116 silly idealTree ├── type-is@1.6.15
+116 silly idealTree ├── ultron@1.1.0
+116 silly idealTree ├── unpipe@1.0.0
+116 silly idealTree ├── utils-merge@1.0.0
+116 silly idealTree ├── uws@0.14.5
+116 silly idealTree ├── vary@1.1.1
+116 silly idealTree ├── ws@2.3.1
+116 silly idealTree ├── xmlhttprequest-ssl@1.5.3
+116 silly idealTree └── yeast@0.1.2
+117 silly generateActionsToTake Starting
+118 silly install generateActionsToTake
+119 silly generateActionsToTake Finishing
+120 silly diffTrees action count 4
+121 silly diffTrees add node-bin-setup@1.0.6
+122 silly diffTrees update n@2.1.8
+123 silly diffTrees add node@8.3.0
+124 silly diffTrees update socket.io@2.0.3
+125 silly decomposeActions action count 32
+126 silly decomposeActions fetch node-bin-setup@1.0.6
+127 silly decomposeActions extract node-bin-setup@1.0.6
+128 silly decomposeActions test node-bin-setup@1.0.6
+129 silly decomposeActions preinstall node-bin-setup@1.0.6
+130 silly decomposeActions build node-bin-setup@1.0.6
+131 silly decomposeActions install node-bin-setup@1.0.6
+132 silly decomposeActions postinstall node-bin-setup@1.0.6
+133 silly decomposeActions finalize node-bin-setup@1.0.6
+134 silly decomposeActions fetch n@2.1.8
+135 silly decomposeActions extract n@2.1.8
+136 silly decomposeActions test n@2.1.8
+137 silly decomposeActions preinstall n@2.1.8
+138 silly decomposeActions build n@2.1.8
+139 silly decomposeActions install n@2.1.8
+140 silly decomposeActions postinstall n@2.1.8
+141 silly decomposeActions finalize n@2.1.8
+142 silly decomposeActions fetch node@8.3.0
+143 silly decomposeActions extract node@8.3.0
+144 silly decomposeActions test node@8.3.0
+145 silly decomposeActions preinstall node@8.3.0
+146 silly decomposeActions build node@8.3.0
+147 silly decomposeActions install node@8.3.0
+148 silly decomposeActions postinstall node@8.3.0
+149 silly decomposeActions finalize node@8.3.0
+150 silly decomposeActions fetch socket.io@2.0.3
+151 silly decomposeActions extract socket.io@2.0.3
+152 silly decomposeActions test socket.io@2.0.3
+153 silly decomposeActions preinstall socket.io@2.0.3
+154 silly decomposeActions build socket.io@2.0.3
+155 silly decomposeActions install socket.io@2.0.3
+156 silly decomposeActions postinstall socket.io@2.0.3
+157 silly decomposeActions finalize socket.io@2.0.3
+158 silly executeActions Starting
+159 silly install executeActions
+160 silly doSerial global-install 0
+161 silly doParallel fetch 4
+162 verbose lock using /home/brodyzt/.npm/_locks/staging-9fe85394eb47a4e7.lock for /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging
+163 silly doParallel extract 4
+164 silly extract node-bin-setup@1.0.6
+165 silly extract n@2.1.8
+166 silly extract node@8.3.0
+167 silly extract socket.io@2.0.3
+168 silly addNamed socket.io@2.0.3
+169 verbose addNamed "2.0.3" is a plain semver version for socket.io
+170 silly mapToRegistry name socket.io
+171 silly mapToRegistry using default registry
+172 silly mapToRegistry registry https://registry.npmjs.org/
+173 silly mapToRegistry uri https://registry.npmjs.org/socket.io
+174 verbose addNameVersion registry:https://registry.npmjs.org/socket.io not in flight; fetching
+175 verbose unbuild node_modules/.staging/node-bin-setup-2a81b065
+176 verbose request uri https://registry.npmjs.org/socket.io
+177 verbose request no auth needed
+178 info attempt registry request try #1 at 8:05:01 PM
+179 verbose etag W/"59a3a57e-28a51"
+180 verbose lastModified Mon, 28 Aug 2017 05:09:18 GMT
+181 http request GET https://registry.npmjs.org/socket.io
+182 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-bin-setup-2a81b065 is being purged from base /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend
+183 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-bin-setup-2a81b065
+184 verbose unbuild node_modules/.staging/node-afef64c5
+185 verbose unbuild node_modules/.staging/n-b6e3c24a
+186 verbose tar unpack /home/brodyzt/.npm/node-bin-setup/1.0.6/package.tgz
+187 verbose tar unpacking to /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-bin-setup-2a81b065
+188 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-bin-setup-2a81b065 is being purged
+189 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-bin-setup-2a81b065
+190 silly gunzTarPerm modes [ '777', '666' ]
+191 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5 is being purged from base /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend
+192 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5
+193 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/n-b6e3c24a is being purged from base /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend
+194 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/n-b6e3c24a
+195 verbose tar unpack /home/brodyzt/.npm/node/8.3.0/package.tgz
+196 verbose tar unpacking to /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5
+197 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5 is being purged
+198 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5
+199 verbose tar unpack /home/brodyzt/.npm/n/2.1.8/package.tgz
+200 verbose tar unpacking to /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/n-b6e3c24a
+201 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/n-b6e3c24a is being purged
+202 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/n-b6e3c24a
+203 silly gunzTarPerm modes [ '777', '666' ]
+204 silly gunzTarPerm modes [ '777', '666' ]
+205 silly gunzTarPerm extractEntry package.json
+206 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+207 silly gunzTarPerm extractEntry package.json
+208 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+209 silly gunzTarPerm extractEntry package.json
+210 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+211 silly gunzTarPerm extractEntry README.md
+212 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+213 silly gunzTarPerm extractEntry .github/CONTRIBUTING.md
+214 silly gunzTarPerm modified mode [ '.github/CONTRIBUTING.md', 420, 438 ]
+215 silly gunzTarPerm extractEntry README.md
+216 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+217 silly gunzTarPerm extractEntry installArchSpecificPackage.js
+218 silly gunzTarPerm modified mode [ 'installArchSpecificPackage.js', 420, 438 ]
+219 silly gunzTarPerm extractEntry index.js
+220 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+221 http 304 https://registry.npmjs.org/socket.io
+222 verbose headers { date: 'Wed, 06 Sep 2017 01:04:59 GMT',
+222 verbose headers   via: '1.1 varnish',
+222 verbose headers   'cache-control': 'max-age=300',
+222 verbose headers   etag: 'W/"59a3a57e-28a51"',
+222 verbose headers   age: '257',
+222 verbose headers   connection: 'keep-alive',
+222 verbose headers   'x-served-by': 'cache-bos8230-BOS',
+222 verbose headers   'x-cache': 'HIT',
+222 verbose headers   'x-cache-hits': '3',
+222 verbose headers   'x-timer': 'S1504659900.996817,VS0,VE0',
+222 verbose headers   vary: 'Accept-Encoding, Accept' }
+223 silly get cb [ 304,
+223 silly get   { date: 'Wed, 06 Sep 2017 01:04:59 GMT',
+223 silly get     via: '1.1 varnish',
+223 silly get     'cache-control': 'max-age=300',
+223 silly get     etag: 'W/"59a3a57e-28a51"',
+223 silly get     age: '257',
+223 silly get     connection: 'keep-alive',
+223 silly get     'x-served-by': 'cache-bos8230-BOS',
+223 silly get     'x-cache': 'HIT',
+223 silly get     'x-cache-hits': '3',
+223 silly get     'x-timer': 'S1504659900.996817,VS0,VE0',
+223 silly get     vary: 'Accept-Encoding, Accept' } ]
+224 verbose etag https://registry.npmjs.org/socket.io from cache
+225 verbose get saving socket.io to /home/brodyzt/.npm/registry.npmjs.org/socket.io/.cache.json
+226 silly gunzTarPerm extractEntry .github/ISSUE_TEMPLATE.md
+227 silly gunzTarPerm modified mode [ '.github/ISSUE_TEMPLATE.md', 420, 438 ]
+228 silly gunzTarPerm extractEntry .github/PULL_REQUEST_TEMPLATE.md
+229 silly gunzTarPerm modified mode [ '.github/PULL_REQUEST_TEMPLATE.md', 420, 438 ]
+230 silly mapToRegistry name socket.io
+231 silly mapToRegistry using default registry
+232 silly mapToRegistry registry https://registry.npmjs.org/
+233 silly mapToRegistry uri https://registry.npmjs.org/socket.io
+234 verbose addRemoteTarball https://registry.npmjs.org/socket.io/-/socket.io-2.0.3.tgz not in flight; adding
+235 verbose addRemoteTarball [ 'https://registry.npmjs.org/socket.io/-/socket.io-2.0.3.tgz',
+235 verbose addRemoteTarball   '4359f06a24933ae6bd087798af78c680eae345e3' ]
+236 info retry fetch attempt 1 at 8:05:01 PM
+237 info attempt registry request try #1 at 8:05:01 PM
+238 http fetch GET https://registry.npmjs.org/socket.io/-/socket.io-2.0.3.tgz
+239 silly gunzTarPerm extractEntry Dockerfile
+240 silly gunzTarPerm modified mode [ 'Dockerfile', 420, 438 ]
+241 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-bin-setup-2a81b065/node_modules is being purged
+242 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-bin-setup-2a81b065/node_modules
+243 silly gunzTarPerm extractEntry Makefile
+244 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
+245 silly gunzTarPerm extractEntry bin/n
+246 silly gunzTarPerm modified mode [ 'bin/n', 493, 511 ]
+247 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5/node_modules is being purged
+248 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5/node_modules
+249 http fetch 200 https://registry.npmjs.org/socket.io/-/socket.io-2.0.3.tgz
+250 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/n-b6e3c24a/node_modules is being purged
+251 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/n-b6e3c24a/node_modules
+252 silly fetchAndShaCheck shasum 4359f06a24933ae6bd087798af78c680eae345e3
+253 verbose addTmpTarball /tmp/npm-291-7f724b71/registry.npmjs.org/socket.io/-/socket.io-2.0.3.tgz not in flight; adding
+254 verbose addTmpTarball already have metadata; skipping unpack for socket.io@2.0.3
+255 verbose unbuild node_modules/.staging/socket.io-83598f86
+256 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/socket.io-83598f86 is being purged from base /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend
+257 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/socket.io-83598f86
+258 verbose tar unpack /home/brodyzt/.npm/socket.io/2.0.3/package.tgz
+259 verbose tar unpacking to /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/socket.io-83598f86
+260 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/socket.io-83598f86 is being purged
+261 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/socket.io-83598f86
+262 silly gunzTarPerm modes [ '777', '666' ]
+263 silly gunzTarPerm extractEntry package.json
+264 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+265 silly gunzTarPerm extractEntry LICENSE
+266 silly gunzTarPerm modified mode [ 'LICENSE', 436, 438 ]
+267 silly gunzTarPerm extractEntry Readme.md
+268 silly gunzTarPerm modified mode [ 'Readme.md', 436, 438 ]
+269 silly gunzTarPerm extractEntry lib/client.js
+270 silly gunzTarPerm modified mode [ 'lib/client.js', 436, 438 ]
+271 silly gunzTarPerm extractEntry lib/index.js
+272 silly gunzTarPerm modified mode [ 'lib/index.js', 436, 438 ]
+273 silly gunzTarPerm extractEntry lib/namespace.js
+274 silly gunzTarPerm modified mode [ 'lib/namespace.js', 436, 438 ]
+275 silly gunzTarPerm extractEntry lib/socket.js
+276 silly gunzTarPerm modified mode [ 'lib/socket.js', 436, 438 ]
+277 silly gunzTarPerm extractEntry History.md
+278 silly gunzTarPerm modified mode [ 'History.md', 436, 438 ]
+279 silly gentlyRm /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/socket.io-83598f86/node_modules is being purged
+280 verbose gentlyRm don't care about contents; nuking /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/socket.io-83598f86/node_modules
+281 silly doParallel preinstall 4
+282 silly preinstall node-bin-setup@1.0.6 /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-bin-setup-2a81b065
+283 info lifecycle node-bin-setup@1.0.6~preinstall: node-bin-setup@1.0.6
+284 silly preinstall n@2.1.8 /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/n-b6e3c24a
+285 info lifecycle n@2.1.8~preinstall: n@2.1.8
+286 silly preinstall node@8.3.0 /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5
+287 info lifecycle node@8.3.0~preinstall: node@8.3.0
+288 silly preinstall socket.io@2.0.3 /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/socket.io-83598f86
+289 info lifecycle socket.io@2.0.3~preinstall: socket.io@2.0.3
+290 silly lifecycle node-bin-setup@1.0.6~preinstall: no script for preinstall, continuing
+291 silly lifecycle n@2.1.8~preinstall: no script for preinstall, continuing
+292 verbose lifecycle node@8.3.0~preinstall: unsafe-perm in lifecycle true
+293 verbose lifecycle node@8.3.0~preinstall: PATH: /usr/share/npm/bin/node-gyp-bin:/mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5/node_modules/.bin:/mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/AMD APP/bin/x86_64:/mnt/c/ProgramData/Oracle/Java/javapath_target_1261571640:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Program Files (x86)/ATI Technologies/ATI.ACE/Core-Static:/mnt/c/Program Files (x86)/QuickTime/QTSystem:/mnt/c/Program Files/Intel/WiFi/bin:/mnt/c/Program Files/Common Files/Intel/WirelessCommon:/mnt/c/Program Files/PuTTY:/mnt/c/Users/brody/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Intel/WiFi/bin:/mnt/c/Program Files/Common Files/Intel/WirelessCommon:/mnt/c/Program Files/apache-maven-3.3.9/bin:/mnt/c/Users/brody/AppData/Local/atom/bin
+294 verbose lifecycle node@8.3.0~preinstall: CWD: /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging/node-afef64c5
+295 silly lifecycle node@8.3.0~preinstall: Args: [ '-c', 'node installArchSpecificPackage' ]
+296 silly lifecycle socket.io@2.0.3~preinstall: no script for preinstall, continuing
+297 silly lifecycle node@8.3.0~preinstall: Returned: code: 1  signal: null
+298 info lifecycle node@8.3.0~preinstall: Failed to exec preinstall script
+299 verbose unlock done using /home/brodyzt/.npm/_locks/staging-9fe85394eb47a4e7.lock for /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend/node_modules/.staging
+300 silly rollbackFailedOptional Starting
+301 silly rollbackFailedOptional Finishing
+302 silly runTopLevelLifecycles Starting
+303 silly runTopLevelLifecycles Finishing
+304 silly install printInstalled
+305 warn frontend@1.0.0 No repository field.
+306 verbose stack Error: node@8.3.0 preinstall: `node installArchSpecificPackage`
+306 verbose stack Exit status 1
+306 verbose stack     at EventEmitter.<anonymous> (/usr/share/npm/lib/utils/lifecycle.js:232:16)
+306 verbose stack     at emitTwo (events.js:87:13)
+306 verbose stack     at EventEmitter.emit (events.js:172:7)
+306 verbose stack     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/spawn.js:24:14)
+306 verbose stack     at emitTwo (events.js:87:13)
+306 verbose stack     at ChildProcess.emit (events.js:172:7)
+306 verbose stack     at maybeClose (internal/child_process.js:821:16)
+306 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+307 verbose pkgid node@8.3.0
+308 verbose cwd /mnt/c/Users/brody/Google Drive/Computer Science Projects/CUAir Challenges/Frontend
+309 error Linux 4.4.0-43-Microsoft
+310 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "node"
+311 error node v4.2.6
+312 error npm  v3.5.2
+313 error code ELIFECYCLE
+314 error node@8.3.0 preinstall: `node installArchSpecificPackage`
+314 error Exit status 1
+315 error Failed at the node@8.3.0 preinstall script 'node installArchSpecificPackage'.
+315 error Make sure you have the latest version of node.js and npm installed.
+315 error If you do, this is most likely a problem with the node package,
+315 error not with npm itself.
+315 error Tell the author that this fails on your system:
+315 error     node installArchSpecificPackage
+315 error You can get information on how to open an issue for this project with:
+315 error     npm bugs node
+315 error Or if that isn't available, you can get their info via:
+315 error     npm owner ls node
+315 error There is likely additional logging output above.
+316 verbose exit [ 1, true ]
