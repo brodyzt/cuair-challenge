@@ -11,7 +11,6 @@ function linkSockets() {
     });
 
     socket.on('add_drop', function (msg) {
-       // $('#drops').append($('<li>').text(JSON.parse(msg).release_location.x));
         $('#drops').append($('<li class="drop_item">').text(msg));
     });
 
