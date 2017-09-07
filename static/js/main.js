@@ -2,14 +2,14 @@
  * Created by brody on 9/5/2017.
  */
 
-function relative_x_location(x) {
+function relative_x_location(x, size) {
     var ratio = 468.0/255;
-    return x * ratio + 2.5;
+    return x * ratio + 15 - (size / 2.0);
 }
 
-function relative_y_location(y) {
+function relative_y_location(y, size) {
     var ratio = 468.0/255;
-    return (-1 * y * ratio) + 468 + 2.5;
+    return (-1 * y * ratio) + 468 + 15 - (size / 2.0);
 }
 
 class Drop {
@@ -27,7 +27,6 @@ var drops = [];
 
 
 function display_drop_data(index) {
-    console.log(index);
     $("#drop_data_modal").html(
         '<div class="modal-dialog" role="document">' +
         '            <div class="modal-content">' +
@@ -47,23 +46,23 @@ function display_drop_data(index) {
         '                       <p>Distance From Target: ' + drops[index].dist + ' units</p>' +
         '                   </hr>' +
         '                   <ul>' +
-        '                       <li>Release location: <img src="/img/release.png" class="target_icon"></li>' +
+        '                       <li>Release location: <img src="/img/release.png" class="release_icon"></li>' +
         '                       <li>Hit location: <img src="/img/hit.png" class="hit_icon"></li>' +
         '                   </ul>' +
         '                </div>' +
         '            </div>' +
         '        </div>');
     $('#drop_data_target').css({
-        "left": relative_x_location(135),
-        "top": relative_y_location(100)
+        "left": relative_x_location(135, 50),
+        "top": relative_y_location(100, 50)
     });
     $('#drop_data_release').css({
-        "left": relative_x_location(drops[index].signal_x),
-        "top": relative_y_location(drops[index].signal_y)
+        "left": relative_x_location(drops[index].signal_x, 30),
+        "top": relative_y_location(drops[index].signal_y, 30)
     });
     $('#drop_data_hit').css({
-        "left": relative_x_location(drops[index].drop_x),
-        "top": relative_y_location(drops[index].drop_y)
+        "left": relative_x_location(drops[index].drop_x, 30),
+        "top": relative_y_location(drops[index].drop_y, 30)
     });
     $('#drop_data_modal').modal();
 
@@ -79,12 +78,10 @@ function linkSockets() {
     });
 
     socket.on('add_drop', function (msg) {
-        console.dir(msg);
         var data = JSON.parse(msg);
         var new_drop = new Drop(data.release_location.x,data.release_location.y,data.hit_location.x,data.hit_location.y,data.dist_from_target);
         drops.push(new_drop);
-        console.dir(drops);
-        var text = "Drop " + drops.length + ": ";
+        var text = "Drop " + drops.length + ": " + Math.round(new_drop.dist * 100) / 100 + " units";
 
         $('#drops').append('<li class="drop_item" style="display: inline-block">'
             + text + '<button class="btn btn-primary" style="float: right" onclick="display_drop_data(' + (drops.length - 1) + ')">View Drop</button></li>');
@@ -95,7 +92,6 @@ function linkSockets() {
             $('#auto_airdrop_switch').prop('checked', true);
         } else {
             $('#auto_airdrop_switch').prop('checked', false);
-            console.log("check removed");
         }
 
     });
@@ -141,6 +137,7 @@ function addEventListeners() {
     });
 
     $('#clear_drops_button').click(function () {
+        drops = []
         $("#drops").html("");
     })
 

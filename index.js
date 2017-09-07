@@ -85,9 +85,8 @@ function drop_if_in_range() {
                     request.post(
                         'http://128.253.51.87/plane/release_bottle',
                         function (error, response, body) {
-                            if (!error && response.statusCode === 200) {
+                            if (!error && response.statusCode === 200 && airdrop_status !== "dropped") {
                                 set_drop_status("dropped");
-                                console.log("range drop");
                                 io.emit("add_drop", body);
                             }
                         }
@@ -178,7 +177,6 @@ app.post('/manual_drop', function(req, res) {
             function (error, response, body) {
                 if (!error && response.statusCode === 200) {
                     io.emit("add_drop", body);
-                    console.log("add drop manual")
                 }
             }
         );

@@ -100,9 +100,14 @@ table td {
     position: absolute;
 }
 
-.target_icon, .release_icon, .hit_icon {
+.release_icon, .hit_icon {
     height: 25px;
     width: 25px;
+}
+
+.target_icon {
+    height: 50px;
+    width: 50px;
 }
 
 .drop_item {
