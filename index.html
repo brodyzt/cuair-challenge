@@ -39,30 +39,20 @@
 
 <nav class="navbar navbar-expand-md fixed-top">
     <a class="navbar-brand" href="#">CUAir Flight Dashboard</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
 </nav>
 
 <div class="container">
     <div class="row">
         <div class="col" style="width: 255px">
+
             <div id="map">
                 <div id="target_div"><img src="/img/target.png" id="target_icon"></div>
                 <div id="location_div"><img src="/img/location.png" id="location_icon"></div>
             </div>
         </div>
         <div class="col" id="control-panel">
+            <h1 style="text-align: center">Control Panel</h1>
+
             <div>
                 Automatic airdrop:
                 <input type="checkbox" class="js-switch" id="auto_airdrop_switch" />
@@ -139,15 +129,21 @@
                     Please reset payload before dropping again.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Sounds good</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Sounds Good</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal fade" id="drop_data_modal" tabindex="-1" role="dialog" aria-hidden="true">
+
+    </div>
 
 
-
+<ul>
+    <li>Release location: <img src="/img/target.png" class="target_icon"></li>
+    <li>Hit location: <img src="/img/hit.png" class="hit_icon"></li>
+</ul>
 
 
 

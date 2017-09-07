@@ -2,6 +2,74 @@
  * Created by brody on 9/5/2017.
  */
 
+function relative_x_location(x) {
+    var ratio = 468.0/255;
+    return x * ratio + 2.5;
+}
+
+function relative_y_location(y) {
+    var ratio = 468.0/255;
+    return (-1 * y * ratio) + 468 + 2.5;
+}
+
+class Drop {
+    constructor(signal_x, signal_y, drop_x, drop_y, dist) {
+        this.signal_x = signal_x;
+        this.signal_y = signal_y;
+        this.drop_x = drop_x;
+        this.drop_y = drop_y;
+        this.dist = dist;
+    }
+}
+
+var drops = [];
+
+
+
+function display_drop_data(index) {
+    console.log(index);
+    $("#drop_data_modal").html(
+        '<div class="modal-dialog" role="document">' +
+        '            <div class="modal-content">' +
+        '                <div class="modal-header">' +
+        '                    <h5 class="modal-title">Drop ' + (index + 1) + '</h5>' +
+        '                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+        '                        <span aria-hidden="true">&times;</span>' +
+        '                    </button>' +
+        '                </div>' +
+        '                <div class="modal-body">' +
+        '                  <div id="drop_data_map">' +
+        '                       <div id="drop_data_target"><img src="/img/target.png" class="target_icon"></div>' +
+        '                       <div id="drop_data_release"><img src="/img/release.png" class="release_icon"></div>' +
+        '                       <div id="drop_data_hit"><img src="/img/hit.png" class="hit_icon"></div>' +
+        '                   </div>' +
+        '                   <hr>' +
+        '                       <p>Distance From Target: ' + drops[index].dist + ' units</p>' +
+        '                   </hr>' +
+        '                   <ul>' +
+        '                       <li>Release location: <img src="/img/release.png" class="target_icon"></li>' +
+        '                       <li>Hit location: <img src="/img/hit.png" class="hit_icon"></li>' +
+        '                   </ul>' +
+        '                </div>' +
+        '            </div>' +
+        '        </div>');
+    $('#drop_data_target').css({
+        "left": relative_x_location(135),
+        "top": relative_y_location(100)
+    });
+    $('#drop_data_release').css({
+        "left": relative_x_location(drops[index].signal_x),
+        "top": relative_y_location(drops[index].signal_y)
+    });
+    $('#drop_data_hit').css({
+        "left": relative_x_location(drops[index].drop_x),
+        "top": relative_y_location(drops[index].drop_y)
+    });
+    $('#drop_data_modal').modal();
+
+
+}
+
 //Links elements to backend using socket.io
 function linkSockets() {
     var socket = io();
@@ -11,7 +79,15 @@ function linkSockets() {
     });
 
     socket.on('add_drop', function (msg) {
-        $('#drops').append($('<li class="drop_item">').text(msg));
+        console.dir(msg);
+        var data = JSON.parse(msg);
+        var new_drop = new Drop(data.release_location.x,data.release_location.y,data.hit_location.x,data.hit_location.y,data.dist_from_target);
+        drops.push(new_drop);
+        console.dir(drops);
+        var text = "Drop " + drops.length + ": ";
+
+        $('#drops').append('<li class="drop_item" style="display: inline-block">'
+            + text + '<button class="btn btn-primary" style="float: right" onclick="display_drop_data(' + (drops.length - 1) + ')">View Drop</button></li>');
     });
 
     socket.on('auto_airdrop_status', function (msg) {
@@ -57,7 +133,7 @@ function addEventListeners() {
     $('#optimal_manual_drop_button').click(function () {
         jQuery.ajax({
             type: 'PUT',
-            url: '/manual_drop'
+            url: '/auto_drop'
         });
     });
     $('#immediate_manual_drop_button').click(function () {
@@ -83,6 +159,7 @@ $(document).ready(function() {
 
     $.post("/auto_airdrop_off");
     $.post("/reset");
+    drops = [];
 });
 
 var location_dot = document.getElementById("location_icon");

@@ -29,7 +29,7 @@ var auto_airdrop_status = false;
 function set_auto_drop_status(status) {
     if(auto_airdrop_status !== status) {
         auto_airdrop_status = status;
-        if(status === "true" && airdrop_status !== "waiting for optimal time")
+        if(status === "true" && airdrop_status === "carrying")
         {
             set_drop_status("waiting for optimal time");
             autoDrop = setInterval(function(){ drop_if_in_range() }, 50);
@@ -158,7 +158,7 @@ app.post('/reset', function(req, res) {
 
 
 //Manually triggered to drop when optimal
-app.put('/manual_drop', function(req, res) {
+app.put('/auto_drop', function(req, res) {
     if(airdrop_status === "dropped") {
         io.emit("invalid_action");
     } else {
@@ -178,6 +178,7 @@ app.post('/manual_drop', function(req, res) {
             function (error, response, body) {
                 if (!error && response.statusCode === 200) {
                     io.emit("add_drop", body);
+                    console.log("add drop manual")
                 }
             }
         );
